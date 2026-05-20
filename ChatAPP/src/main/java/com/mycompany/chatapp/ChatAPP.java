@@ -156,6 +156,7 @@ public class ChatAPP {
         Message.setMaxMessages(numMessages);
         
                 int menuChoice;
+                 int i = 1; // manual counter
         do {
             System.out.println("\n--- Menu ---");
             System.out.println("1. Send Messages");
@@ -163,6 +164,7 @@ public class ChatAPP {
             System.out.println("3. Quit");
             System.out.print("Choose: ");
             menuChoice = input1.nextInt();
+            input1.nextLine();
 
             Message temp = new Message("", "", 0);
 
@@ -181,8 +183,8 @@ public class ChatAPP {
                     System.out.println("Coming Soon.");
             }
 
-         int i = 1; // manual counter
-         while (i <= numMessages) {
+        
+         if (i <= numMessages){
             System.out.println("\n--- Message " + i + " ---");
             
             String recipient;
@@ -229,16 +231,19 @@ public class ChatAPP {
                     i++; // count this message
                 } else {
                     // Don't increment for discard or store
-                    System.out.println("Message not sent. Re-enter details for message " + i);
+//                    System.out.println("Message not sent. Re-enter details for message " + i);
                 }
             } else {
                 // Message too long, don't increment either
-                System.out.println("Message not sent. Re-enter details for message " + i);
+                System.out.println("Message not sent.");
             }
-          }
+          } else {
+             System.out.println("You have already sent the indicated amount of messages.");
+         }
         } while (menuChoice!= 3);
 
         input1.close();
     }
 }
 
+//remove punctuation, re-enter details for discard, zero for delete, option 2 coming soon
