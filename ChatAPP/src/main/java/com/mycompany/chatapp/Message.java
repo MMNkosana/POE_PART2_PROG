@@ -42,7 +42,7 @@ public class Message {
     // Generate 10-digit random ID
     private String generateMessageID() {
         Random rand = new Random();
-        long id = 1000000L + rand.nextLong(9000000L); // ensures 10 digits
+        long id = 1000000000L + rand.nextLong(9000000000L); // ensures 10 digits
         return String.valueOf(id);
     }
 
@@ -68,10 +68,14 @@ public class Message {
     }
 
     public String createMessageHash() {
+        String cleanMsg = message.replaceAll("[^a-zA-Z0-9\\s]", "");
         String[] words = message.trim().split("\\s+");
         String firstWord = words.length > 0? words[0] : "";
         String lastWord = words.length > 1? words[words.length - 1] : firstWord;
 
+        firstWord = firstWord.replaceAll("[^a-zA-Z0-9]", "");
+        lastWord = lastWord.replaceAll("[^a-zA-Z0-9]", "");
+        
         String hash = messageID.substring(0, 2) + ":" + messageNumber + ":" +
                       firstWord.toUpperCase() + lastWord.toUpperCase();
         return hash.toUpperCase();
@@ -89,6 +93,7 @@ public class Message {
                 }
             case "discard":
                 return "Press 0 to delete the message.";
+                
             case "store":
                 storeMessagesToJSON();
                 return "Message successfully stored.";

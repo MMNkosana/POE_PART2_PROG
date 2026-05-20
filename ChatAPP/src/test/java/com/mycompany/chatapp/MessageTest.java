@@ -59,8 +59,11 @@ public class MessageTest {
         Message msg = new Message("+27718693002", "Hi Mike, can you join us for dinner tonight?", 0);
  
         String hash = msg.createMessageHash();
-        assertEquals("Hash should end with HITONIGHT", hash.endsWith("HITONIGHT"));
-        assertEquals("Hash should start with 00:0:", hash.startsWith("00:0:"));
+        
+        String MessageID = msg.getMessageID().substring(0,2);
+        
+        assertEquals(true, hash.endsWith("HITONIGHT"));
+        assertEquals(true, hash.startsWith(MessageID+":0:"));
     }
 
     @Test
@@ -88,7 +91,7 @@ public class MessageTest {
     @Test
     public void testMessageIDCreated() {
         Message msg = new Message("+27718693002", "Test", 1);
-        assertEquals("Message ID should be 10 digits", msg.checkMessageID());
+        assertEquals(true, msg.checkMessageID());
         assertEquals(10, msg.getMessageID().length());
     }
 }

@@ -173,14 +173,14 @@ public class ChatAPP {
                     System.out.println("Use the main flow to send more messages.");
                     break;
                 case 2:
-                    System.out.println(temp.printMessages());
+                    System.out.println("Coming Soon.");
                     break;
                 case 3:
                     System.out.println("Total messages sent: " + temp.returnTotalMessages());
                     System.out.println("Exiting...");
                     break;
-                default:
-                    System.out.println("Coming Soon.");
+//                default:
+//                    System.out.println("Coming Soon.");
             }
 
         
@@ -211,15 +211,32 @@ public class ChatAPP {
 
             if (msg.checkMessageLength().equals("Message ready to send.")) {
                 System.out.println("Message Hash: " + msg.createMessageHash());
-
+ int choice =0;
+                boolean Decision = true;
+                while (Decision){
+                    
+                
                 System.out.println("\n1. Send Message\n2. Disregard Message\n3. Store Message");
                 System.out.print("Choose: ");
-                int choice = input1.nextInt();
+                choice = input1.nextInt();
                 input1.nextLine();
 
                 String action = choice == 1? "send" : choice == 2? "discard" : "store";
+                
                 String result = msg.sentMessage(action);
-                System.out.println(result);
+                
+                if (result =="Press 0 to delete the message."){
+                    System.out.println(result);
+                    int Press0 = input1.nextInt();
+                    if (Press0 == 0){
+                        Decision = false;
+                    }
+                }else{
+                     System.out.println(result);
+                    Decision = false;
+                }
+                
+                }
 
                 if (choice == 1) {
                     // Only increment if message was actually sent
@@ -231,7 +248,7 @@ public class ChatAPP {
                     i++; // count this message
                 } else {
                     // Don't increment for discard or store
-//                    System.out.println("Message not sent. Re-enter details for message " + i);
+                    System.out.println("Message not sent.");
                 }
             } else {
                 // Message too long, don't increment either
@@ -246,4 +263,4 @@ public class ChatAPP {
     }
 }
 
-//remove punctuation, re-enter details for discard, zero for delete, option 2 coming soon
+//remove punctuation, re-enter details for discard, zero for delete, 
