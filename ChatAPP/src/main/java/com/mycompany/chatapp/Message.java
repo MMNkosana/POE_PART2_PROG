@@ -68,7 +68,7 @@ public class Message {
     }
 
     public String createMessageHash() {
-        String cleanMsg = message.replaceAll("[^a-zA-Z0-9\\s]", "");
+//        String cleanMsg = message.replaceAll("[^a-zA-Z0-9\\s]", "");
         String[] words = message.trim().split("\\s+");
         String firstWord = words.length > 0? words[0] : "";
         String lastWord = words.length > 1? words[words.length - 1] : firstWord;

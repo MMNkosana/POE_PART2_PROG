@@ -127,17 +127,17 @@ public class ChatAPP {
             String loginUserName;
             String loginPassword;
              
-        do {
+        do {//loop with 3 attempts for user to login
                 System.out.println("Please enter your username");
                 loginUserName = input1.nextLine();
                 
                 System.out.println("Please enter your password");
                 loginPassword = input1.nextLine();
                 
-                if (UserLogin.loginUser(loginUserName, loginPassword)){
-                    System.out.println(UserLogin.returnLoginStatus(true));
+                if (UserLogin.loginUser(loginUserName, loginPassword)){//calling logimUser method
+                    System.out.println(UserLogin.returnLoginStatus(true));//calling loginreturnstatus method
                     loggedIn = true;
-                    break;
+                    break;//breaking loop if login is successful
                 }else{
                 LoginAttempt--;
                 System.out.println("Login failed. Attempts left" + LoginAttempt);
@@ -146,6 +146,7 @@ public class ChatAPP {
         while (LoginAttempt > 0);
         if (!loggedIn){
             System.out.println(UserLogin.returnLoginStatus(false));
+            System.out.println("Welcome " + name + " " + surname + ", it is great to see you again.");
         }
                 System.out.println("Welcome to QuickChat.");
 
@@ -156,7 +157,7 @@ public class ChatAPP {
         Message.setMaxMessages(numMessages);
         
                 int menuChoice;
-                 int i = 1; // manual counter
+                 int i = 1; // counter
         do {
             System.out.println("\n--- Menu ---");
             System.out.println("1. Send Messages");
@@ -190,8 +191,7 @@ public class ChatAPP {
             String recipient;
             String recipientCheck;
            
-            // Loop until recipient is valid
-            do {
+            do {// Loop for valid recipient
                 System.out.print("Enter recipient number: ");
                 recipient = input1.nextLine();
                
@@ -211,7 +211,7 @@ public class ChatAPP {
 
             if (msg.checkMessageLength().equals("Message ready to send.")) {
                 System.out.println("Message Hash: " + msg.createMessageHash());
- int choice =0;
+                int choice =0;
                 boolean Decision = true;
                 while (Decision){
                     
@@ -225,7 +225,7 @@ public class ChatAPP {
                 
                 String result = msg.sentMessage(action);
                 
-                if (result =="Press 0 to delete the message."){
+                if (result =="Press 0 to delete the message."){//loop that allows message to be deleted only if 0 is pressed
                     System.out.println(result);
                     int Press0 = input1.nextInt();
                     if (Press0 == 0){
@@ -245,22 +245,22 @@ public class ChatAPP {
                     System.out.println("Message Hash: " + msg.getMessageHash());
                     System.out.println("Recipient: " + msg.getRecipient());
                     System.out.println("Message: " + msg.getMessage());
-                    i++; // count this message
+                    i++; 
                 } else {
                     // Don't increment for discard or store
                     System.out.println("Message not sent.");
                 }
             } else {
-                // Message too long, don't increment either
+                
                 System.out.println("Message not sent.");
             }
           } else {
              System.out.println("You have already sent the indicated amount of messages.");
          }
-        } while (menuChoice!= 3);
+        } while (menuChoice!= 3);//do loop will close when user chooses 3 
 
         input1.close();
     }
 }
 
-//remove punctuation, re-enter details for discard, zero for delete, 
+ 

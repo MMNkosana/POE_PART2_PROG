@@ -55,7 +55,7 @@ public class MessageTest {
 
     @Test
     public void testMessageHashCorrect() {
-        // Force ID to start with 00 so hash = 00:0:HITONIGHT
+        
         Message msg = new Message("+27718693002", "Hi Mike, can you join us for dinner tonight?", 0);
  
         String hash = msg.createMessageHash();

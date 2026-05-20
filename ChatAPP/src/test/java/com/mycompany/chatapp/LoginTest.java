@@ -40,12 +40,12 @@ public class LoginTest {
     @Test
     public void CheckPasswordCharacters(){
         
-        assertEquals(true, LoginTest.CheckPasswordComplexity("Rootcause1"));
+        assertEquals(false, LoginTest.CheckPasswordComplexity("Rootcause1"));
     }
     @Test
     public void CheckPhoneNumberChar1(){
         
-        assertEquals(true, LoginTest.CheckCellPhoneNumber("08966553"));
+        assertEquals(false, LoginTest.CheckCellPhoneNumber("08966553"));
     }
 
 

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.mycompany.chatapp.LoginTest" time="0.105" tests="5" errors="0" skipped="0" failures="2">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.mycompany.chatapp.LoginTest" time="0.108" tests="5" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="25"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.class.path" value="C:\Users\lab_services_student\Documents\NetBeansProjects\ChatAPP\target\test-classes;C:\Users\lab_services_student\Documents\NetBeansProjects\ChatAPP\target\classes;C:\Users\lab_services_student\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.3\junit-jupiter-api-5.10.3.jar;C:\Users\lab_services_student\.m2\repository\org\junit\platform\junit-platform-commons\1.10.3\junit-platform-commons-1.10.3.jar;C:\Users\lab_services_student\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\lab_services_student\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.3\junit-jupiter-params-5.10.3.jar;C:\Users\lab_services_student\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.3\junit-jupiter-engine-5.10.3.jar;C:\Users\lab_services_student\.m2\repository\org\junit\platform\junit-platform-engine\1.10.3\junit-platform-engine-1.10.3.jar;C:\Users\lab_services_student\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;"/>
+    <property name="java.class.path" value="C:\Users\lab_services_student\Documents\NetBeansProjects\ChatAPP\target\test-classes;C:\Users\lab_services_student\Documents\NetBeansProjects\ChatAPP\target\classes;C:\Users\lab_services_student\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.3\junit-jupiter-api-5.10.3.jar;C:\Users\lab_services_student\.m2\repository\org\junit\platform\junit-platform-commons\1.10.3\junit-platform-commons-1.10.3.jar;C:\Users\lab_services_student\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\lab_services_student\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.3\junit-jupiter-params-5.10.3.jar;C:\Users\lab_services_student\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.3\junit-jupiter-engine-5.10.3.jar;C:\Users\lab_services_student\.m2\repository\org\junit\platform\junit-platform-engine\1.10.3\junit-platform-engine-1.10.3.jar;C:\Users\lab_services_student\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\lab_services_student\.m2\repository\one\xingyi\json\1.1\json-1.1.jar;C:\Users\lab_services_student\.m2\repository\org\json\json\20180813\json-20180813.jar;C:\Users\lab_services_student\.m2\repository\one\xingyi\rest\1.1\rest-1.1.jar;C:\Users\lab_services_student\.m2\repository\one\xingyi\rest\1.1\rest-1.1-tests.jar;"/>
     <property name="java.vm.vendor" value="Eclipse Adoptium"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="user.variant" value=""/>
@@ -15,10 +15,10 @@
     <property name="user.country" value="US"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Apache NetBeans\jdk\bin"/>
-    <property name="sun.java.command" value="C:\Users\lab_services_student\AppData\Local\Temp\surefire12560481154971702943\surefirebooter-20260415111706277_3.jar C:\Users\lab_services_student\AppData\Local\Temp\surefire12560481154971702943 2026-04-15T11-17-05_834-jvmRun1 surefire-20260415111706277_1tmp surefire_0-20260415111706277_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\lab_services_student\AppData\Local\Temp\surefire749385358134942999\surefirebooter-20260520172311171_3.jar C:\Users\lab_services_student\AppData\Local\Temp\surefire749385358134942999 2026-05-20T17-23-10_771-jvmRun1 surefire-20260520172311171_1tmp surefire_0-20260520172311171_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="test" value="com.mycompany.chatapp.LoginTest"/>
-    <property name="surefire.test.class.path" value="C:\Users\lab_services_student\Documents\NetBeansProjects\ChatAPP\target\test-classes;C:\Users\lab_services_student\Documents\NetBeansProjects\ChatAPP\target\classes;C:\Users\lab_services_student\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.3\junit-jupiter-api-5.10.3.jar;C:\Users\lab_services_student\.m2\repository\org\junit\platform\junit-platform-commons\1.10.3\junit-platform-commons-1.10.3.jar;C:\Users\lab_services_student\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\lab_services_student\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.3\junit-jupiter-params-5.10.3.jar;C:\Users\lab_services_student\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.3\junit-jupiter-engine-5.10.3.jar;C:\Users\lab_services_student\.m2\repository\org\junit\platform\junit-platform-engine\1.10.3\junit-platform-engine-1.10.3.jar;C:\Users\lab_services_student\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;"/>
+    <property name="surefire.test.class.path" value="C:\Users\lab_services_student\Documents\NetBeansProjects\ChatAPP\target\test-classes;C:\Users\lab_services_student\Documents\NetBeansProjects\ChatAPP\target\classes;C:\Users\lab_services_student\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.3\junit-jupiter-api-5.10.3.jar;C:\Users\lab_services_student\.m2\repository\org\junit\platform\junit-platform-commons\1.10.3\junit-platform-commons-1.10.3.jar;C:\Users\lab_services_student\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\lab_services_student\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.3\junit-jupiter-params-5.10.3.jar;C:\Users\lab_services_student\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.3\junit-jupiter-engine-5.10.3.jar;C:\Users\lab_services_student\.m2\repository\org\junit\platform\junit-platform-engine\1.10.3\junit-platform-engine-1.10.3.jar;C:\Users\lab_services_student\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\lab_services_student\.m2\repository\one\xingyi\json\1.1\json-1.1.jar;C:\Users\lab_services_student\.m2\repository\org\json\json\20180813\json-20180813.jar;C:\Users\lab_services_student\.m2\repository\one\xingyi\rest\1.1\rest-1.1.jar;C:\Users\lab_services_student\.m2\repository\one\xingyi\rest\1.1\rest-1.1-tests.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\lab_services_student"/>
     <property name="user.language" value="en"/>
@@ -31,7 +31,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\lab_services_student\AppData\Local\Temp\surefire12560481154971702943\surefirebooter-20260415111706277_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\lab_services_student\AppData\Local\Temp\surefire749385358134942999\surefirebooter-20260520172311171_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="25.0.1+8-LTS"/>
@@ -62,35 +62,9 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="69.0"/>
   </properties>
-  <testcase name="testCheckUsername" classname="com.mycompany.chatapp.LoginTest" time="0.032"/>
-  <testcase name="TestPasswordLength" classname="com.mycompany.chatapp.LoginTest" time="0.004"/>
-  <testcase name="CheckPasswordCharacters" classname="com.mycompany.chatapp.LoginTest" time="0.009">
-    <failure message="expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
-	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
-	at com.mycompany.chatapp.LoginTest.CheckPasswordCharacters(LoginTest.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-]]></failure>
-  </testcase>
-  <testcase name="CheckPhoneNumberChar1" classname="com.mycompany.chatapp.LoginTest" time="0.008">
-    <failure message="expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
-	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
-	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
-	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
-	at com.mycompany.chatapp.LoginTest.CheckPhoneNumberChar1(LoginTest.java:48)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-]]></failure>
-  </testcase>
-  <testcase name="testCheckUsernameWithoutUnderscore" classname="com.mycompany.chatapp.LoginTest" time="0.004"/>
+  <testcase name="testCheckUsername" classname="com.mycompany.chatapp.LoginTest" time="0.037"/>
+  <testcase name="TestPasswordLength" classname="com.mycompany.chatapp.LoginTest" time="0.006"/>
+  <testcase name="CheckPasswordCharacters" classname="com.mycompany.chatapp.LoginTest" time="0.003"/>
+  <testcase name="CheckPhoneNumberChar1" classname="com.mycompany.chatapp.LoginTest" time="0.004"/>
+  <testcase name="testCheckUsernameWithoutUnderscore" classname="com.mycompany.chatapp.LoginTest" time="0.003"/>
 </testsuite>
