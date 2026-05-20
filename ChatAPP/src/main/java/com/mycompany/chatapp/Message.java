@@ -4,6 +4,10 @@
  */
 package com.mycompany.chatapp;
 import java.util.Random;
+import org.json.JSONArray;
+import org.json.JSONObject;
+import java.io.FileWriter;
+import java.io.IOException;
 
 /**
  *
@@ -86,6 +90,7 @@ public class Message {
             case "discard":
                 return "Press 0 to delete the message.";
             case "store":
+                storeMessagesToJSON();
                 return "Message successfully stored.";
             default:
                 return "Invalid choice.";
@@ -114,4 +119,28 @@ public class Message {
     public String getMessageHash() { return messageHash; }
     public String getRecipient() { return recipient; }
     public String getMessage() { return message; }    
+    
+        public static void storeMessagesToJSON() {
+        JSONArray jsonArray = new JSONArray();
+
+        for (int i = 0; i < totalSent; i++) {
+            Message m = sentMessages[i];
+
+            JSONObject obj = new JSONObject();
+            obj.put("messageID", m.messageID);
+            obj.put("messageHash", m.messageHash);
+            obj.put("recipient", m.recipient);
+            obj.put("message", m.message);
+            obj.put("messageNumber", m.messageNumber);
+
+            jsonArray.put(obj);
+        }
+
+        try (FileWriter file = new FileWriter("messages.json")) {
+            file.write(jsonArray.toString(4)); // 4 = pretty print indent
+            System.out.println("Messages saved to messages.json");
+        } catch (IOException e) {
+            System.out.println("Error writing to file: " + e.getMessage());
+        }
+    }
 }
