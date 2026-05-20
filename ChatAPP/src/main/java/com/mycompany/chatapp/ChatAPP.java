@@ -154,13 +154,50 @@ public class ChatAPP {
         input1.nextLine();
 
         Message.setMaxMessages(numMessages);
+        
+                int menuChoice;
+        do {
+            System.out.println("\n--- Menu ---");
+            System.out.println("1. Send Messages");
+            System.out.println("2. Show recently sent messages");
+            System.out.println("3. Quit");
+            System.out.print("Choose: ");
+            menuChoice = input1.nextInt();
 
-        int i = 1; // manual counter
-        while (i <= numMessages) {
+            Message temp = new Message("", "", 0);
+
+            switch(menuChoice) {
+                case 1:
+                    System.out.println("Use the main flow to send more messages.");
+                    break;
+                case 2:
+                    System.out.println(temp.printMessages());
+                    break;
+                case 3:
+                    System.out.println("Total messages sent: " + temp.returnTotalMessages());
+                    System.out.println("Exiting...");
+                    break;
+                default:
+                    System.out.println("Coming Soon.");
+            }
+
+         int i = 1; // manual counter
+         while (i <= numMessages) {
             System.out.println("\n--- Message " + i + " ---");
-
-            System.out.print("Enter recipient number: ");
-            String recipient = input1.nextLine();
+            
+            String recipient;
+            String recipientCheck;
+           
+            // Loop until recipient is valid
+            do {
+                System.out.print("Enter recipient number: ");
+                recipient = input1.nextLine();
+               
+                Message tempCheck = new Message(recipient, "", 0);
+                recipientCheck = tempCheck.checkRecipientCell();
+                System.out.println(recipientCheck);
+               
+            } while (!recipientCheck.equals("Cell phone number successfully captured."));
 
             System.out.print("Enter message: ");
             String msgText = input1.nextLine();
@@ -198,34 +235,7 @@ public class ChatAPP {
                 // Message too long, don't increment either
                 System.out.println("Message not sent. Re-enter details for message " + i);
             }
-        }
-
-        // Menu loop
-        int menuChoice;
-        do {
-            System.out.println("\n--- Menu ---");
-            System.out.println("1. Send Messages");
-            System.out.println("2. Show recently sent messages");
-            System.out.println("3. Quit");
-            System.out.print("Choose: ");
-            menuChoice = input1.nextInt();
-
-            Message temp = new Message("", "", 0);
-
-            switch(menuChoice) {
-                case 1:
-                    System.out.println("Use the main flow to send more messages.");
-                    break;
-                case 2:
-                    System.out.println(temp.printMessages());
-                    break;
-                case 3:
-                    System.out.println("Total messages sent: " + temp.returnTotalMessages());
-                    System.out.println("Exiting...");
-                    break;
-                default:
-                    System.out.println("Coming Soon.");
-            }
+          }
         } while (menuChoice!= 3);
 
         input1.close();
